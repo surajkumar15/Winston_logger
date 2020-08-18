@@ -15,7 +15,7 @@ class FileTransport extends Transport {
     }
 }
 class CustomTransport extends Transport {
-    log(message, cb) {
+    log(message) {
         switch (message.level) {
             case "info":
                 console.log(message);
@@ -32,7 +32,6 @@ class CustomTransport extends Transport {
             default:
                 console.log(message);
         }
-        cb();
     }
 }
 exports.winstonLogger = winston.createLogger({

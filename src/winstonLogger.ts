@@ -35,7 +35,7 @@ class CustomTransport extends Transport {
       default:
        console.log(message);
     }
-  
+    
   }
 }
 export const winstonLogger = winston.createLogger({
